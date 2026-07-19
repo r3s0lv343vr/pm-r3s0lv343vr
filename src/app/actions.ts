@@ -1,0 +1,31 @@
+/**
+ * Server Actions entrypoint.
+ * Implementations live in `src/server/actions/*` by domain; this file re-exports
+ * the same public API so existing `@/app/actions` imports keep working.
+ */
+export { signupAction } from "@/server/actions/auth";
+export {
+  createProjectAction,
+  archiveProjectAction,
+  completeOnboardingAction,
+} from "@/server/actions/projects";
+export {
+  createTaskAction,
+  updateTaskStatusAction,
+  setTaskStatus,
+  assignTaskAction,
+  updateTaskMembersAction,
+  updateTaskStaffingAction,
+  postTaskUpdateAction,
+  signOffTaskAction,
+} from "@/server/actions/tasks";
+export { clockInAction, clockOutAction } from "@/server/actions/time";
+export {
+  createMilestoneAction,
+  createRiskAction,
+  createIssueAction,
+  createChangeRequestAction,
+  updateBudgetAction,
+  updateMilestoneBudgetAction,
+} from "@/server/actions/project-meta";
+export { toggleIntegrationAction, ensureIntegrationsAction } from "@/server/actions/integrations";
